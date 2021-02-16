@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>medbay</title>
+
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:300,400,400i,700&amp;subset=cyrillic-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en'
+            }, 'google_translate_element');
+        }
+    </script>
+    <script>
+        (function() {
+            var gtConstEvalStartTime = new Date();
+            /*
+                 Copyright The Closure Library Authors.
+                 SPDX-License-Identifier: Apache-2.0
+                */
+            var h = this || self,
+                l = /^[\w+/_-]+[=]{0,2}$/,
+                m = null;
+
+            function n(a) {
+                return (a = a.querySelector && a.querySelector("script[nonce]")) && (a = a.nonce || a.getAttribute("nonce")) && l.test(a) ? a : ""
+            }
+
+            function p(a, b) {
+                function c() {}
+                c.prototype = b.prototype;
+                a.c = b.prototype;
+                a.prototype = new c;
+                a.prototype.constructor = a;
+                a.b = function(g, f, k) {
+                    for (var e = Array(arguments.length - 2), d = 2; d < arguments.length; d++) e[d - 2] = arguments[d];
+                    return b.prototype[f].apply(g, e)
+                }
+            }
+
+            function q(a) {
+                return a
+            };
+
+            function r(a) {
+                if (Error.captureStackTrace) Error.captureStackTrace(this, r);
+                else {
+                    var b = Error().stack;
+                    b && (this.stack = b)
+                }
+                a && (this.message = String(a))
+            }
+            p(r, Error);
+            r.prototype.name = "CustomError";
+
+            function u(a, b) {
+                a = a.split("%s");
+                for (var c = "", g = a.length - 1, f = 0; f < g; f++) c += a[f] + (f < b.length ? b[f] : "%s");
+                r.call(this, c + a[g])
+            }
+            p(u, r);
+            u.prototype.name = "AssertionError";
+
+            function v(a, b) {
+                throw new u("Failure" + (a ? ": " + a : ""), Array.prototype.slice.call(arguments, 1));
+            };
+            var w;
+
+            function x(a, b) {
+                this.a = b === y ? a : ""
+            }
+            x.prototype.toString = function() {
+                return "TrustedResourceUrl{" + this.a + "}"
+            };
+            var y = {};
+
+            function z(a) {
+                var b = document.getElementsByTagName("head")[0];
+                b || (b = document.body.parentNode.appendChild(document.createElement("head")));
+                b.appendChild(a)
+            }
+
+            function _loadJs(a) {
+                var b = document;
+                var c = "SCRIPT";
+                "application/xhtml+xml" === b.contentType && (c = c.toLowerCase());
+                c = b.createElement(c);
+                c.type = "text/javascript";
+                c.charset = "UTF-8";
+                if (void 0 === w) {
+                    b = null;
+                    var g = h.trustedTypes;
+                    if (g && g.createPolicy) {
+                        try {
+                            b = g.createPolicy("goog#html", {
+                                createHTML: q,
+                                createScript: q,
+                                createScriptURL: q
+                            })
+                        } catch (t) {
+                            h.console && h.console.error(t.message)
+                        }
+                        w = b
+                    } else w = b
+                }
+                a = (b = w) ? b.createScriptURL(a) : a;
+                a = new x(a, y);
+                a: {
+                    try {
+                        var f = c && c.ownerDocument,
+                            k = f && (f.defaultView || f.parentWindow);
+                        k = k || h;
+                        if (k.Element && k.Location) {
+                            var e = k;
+                            break a
+                        }
+                    } catch (t) {}
+                    e = null
+                }
+                if (e && "undefined" != typeof e.HTMLScriptElement && (!c || !(c instanceof e.HTMLScriptElement) && (c instanceof e.Location || c instanceof e.Element))) {
+                    e = typeof c;
+                    if ("object" == e && null != c || "function" == e) try {
+                        var d = c.constructor.displayName || c.constructor.name || Object.prototype.toString.call(c)
+                    } catch (t) {
+                        d = "<object could not be stringified>"
+                    } else d = void 0 === c ? "undefined" : null === c ? "null" : typeof c;
+                    v("Argument is not a %s (or a non-Element, non-Location mock); got: %s",
+                        "HTMLScriptElement", d)
+                }
+                a instanceof x && a.constructor === x ? d = a.a : (d = typeof a, v("expected object of type TrustedResourceUrl, got '" + a + "' of type " + ("object" != d ? d : a ? Array.isArray(a) ? "array" : d : "null")), d = "type_error:TrustedResourceUrl");
+                c.src = d;
+                (d = c.ownerDocument && c.ownerDocument.defaultView) && d != h ? d = n(d.document) : (null === m && (m = n(h.document)), d = m);
+                d && c.setAttribute("nonce", d);
+                z(c)
+            }
+
+            function _loadCss(a) {
+                var b = document.createElement("link");
+                b.type = "text/css";
+                b.rel = "stylesheet";
+                b.charset = "UTF-8";
+                b.href = a;
+                z(b)
+            }
+
+            function _isNS(a) {
+                a = a.split(".");
+                for (var b = window, c = 0; c < a.length; ++c)
+                    if (!(b = b[a[c]])) return !1;
+                return !0
+            }
+
+            function _setupNS(a) {
+                a = a.split(".");
+                for (var b = window, c = 0; c < a.length; ++c) b.hasOwnProperty ? b.hasOwnProperty(a[c]) ? b = b[a[c]] : b = b[a[c]] = {} : b = b[a[c]] || (b[a[c]] = {});
+                return b
+            }
+            window.addEventListener && "undefined" == typeof document.readyState && window.addEventListener("DOMContentLoaded", function() {
+                document.readyState = "complete"
+            }, !1);
+            if (_isNS('google.translate.Element')) {
+                return
+            }(function() {
+                var c = _setupNS('google.translate._const');
+                c._cest = gtConstEvalStartTime;
+                gtConstEvalStartTime = undefined;
+                c._cl = 'en';
+                c._cuc = 'googleTranslateElementInit';
+                c._cac = '';
+                c._cam = '';
+                c._ctkk = '446371.1423454734';
+                var h = 'translate.googleapis.com';
+                var s = (true ? 'https' : window.location.protocol == 'https:' ? 'https' : 'http') + '://';
+                var b = s + h;
+                c._pah = h;
+                c._pas = s;
+
+                c._plla = h + '/translate_a/l';
+                c._pmi = b + '/translate_static/img/mini_google.png';
+                c._ps = b + '/translate_static/css/translateelement.css';
+                c._puh = 'translate.google.com';
+                _loadCss(c._ps);
+                _loadJs(b + '/translate_static/js/element/main.js');
+            })();
+        })();
+    </script>
+    <script>
+        function myFunctionn() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+    <div class="contain">
+        <section id="home" class="intro-section" style="background:url(image/woah.png)">
+            <div class="container">
+                <div class="topnav" id="myTopnav">
+                    <img src="image/logo-white.png" class="logo" height="50px" width="50px" />
+                    <a class="navbar-right " href="about.html ">Products</a>
+                    <a class="navbar-right " href="contact.html ">Contact</a>
+                    <a href="index.html#about">About Us</a>
+                    <a href="index.html ">Home</a>
+                    <a href="javascript:void(0); " class="icon " onclick="myFunction() ">
+                        <i class="fa fa-bars " style="float:right; position: relative; "></i>
+                    </a>
+                </div>
+            </div>
+            <div class="container upper ">
+                <div class="row ">
+                    <div class="col-md-6 ">
+
+                        <h2 style="font-size:90px; font-weight:600; ">152 Branches
+                        </h2>
+                        <h6 style="font-size:2rem; font-weight:600; ">Throughout Asia-Pacific</h6>
+
+                        <label class="switch">
+                         <input type="checkbox" checked>
+                        <span class="slider round " onclick="myFunction() "></span>
+                         </label>
+                        <div id="google_translate_element"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div id="myDIV ">
+
+            <section class="aboutt-section " id="index ">
+                <div class="container ">
+                    <div class="box row ">
+                        <div class="col-md-6 ">
+                            <h1>Our Branches</h1>
+                            <p>It will be a pleasure to hear from you. We offer our services across different locations. You can contact us by email, phone, or visit our stores to know more about our products. </p>
+                        </div>
+                        <div class="col-md-6 "> <img src="image/map.png "></div>
+                    </div>
+                </div>
+            </section>
+            <section class="second-section ">
+                <div class="container ">
+                    <div class="row ">
+                        <h1>Contact Us:</h1><br>
+                        <div class="col-lg-12 ">
+                            <div class="container col-sm-12 col-12 ">
+                                <div class="row ">
+
+                                    <ul>
+                                        <li>
+                                            <h3>Colombo</h3>
+                                            <h5>(711) 265-7766 | (675) 994-7400 | (266) 855-0910 | (266) 805-8710</h5>
+                                        </li>
+                                        <li>
+                                            <h3>Shanghai</h3>
+                                            <h5>(711) 265-7193 | (675) 854-7400 | (266) 855-0910</h5>
+                                        </li>
+                                        <li>
+                                            <h3>Seoul</h3>
+                                            <h5>(711) 265-9693 | (675) 846-7400 | (266) 855-0910 | (266) 895-0710</h5>
+                                        </li>
+                                        <li>
+                                            <h3>Kyoto</h3>
+                                            <h5>(711) 265-9103 | (675) 844-7400</h5>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="footer-section " id="footer ">
+                <div class="container ">
+                    <div class="row ">
+                        <div class="col-md-4 ">
+                            <img src="image/logo-white.png " height="100px " width="100px ">
+                        </div>
+                        <div class="col-md-4 ">
+                            <ul>
+                                <li>
+                                    <h3>Information</h3>
+                                </li>
+                                <li>About Us</li>
+                                <li>Testimonials</li>
+                                <li>Blog</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4 ">
+                            <ul>
+                                <li>
+                                    <h3>Helpful Links</h3>
+                                </li>
+                                <li>Services</li>
+                                <li>Support</li>
+                                <li>Terms & Conditions</li>
+                                <li>Privacy Policy</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row " style="padding-top: 20px; ">
+                        <div class="col-md-6 ">
+                            <h3>About Us</h3>
+                            <p>One Of the leading Pharma Company since 2020</p>
+                        </div>
+                        <div class="col-md-6 ">
+                            <h3>Subscribe More Info</h3>
+                            <input placeholder="Enter your email " name="email ">
+                            <button class="bt ">Subscribe</button>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <script src="./js/counter.js "></script>
+        <script src="./js/cart.js "></script>
+
+        <script>
+            function myFunction() {
+                var element = document.body;
+                element.classList.toggle("dark-mode");
+            }
+        </script>
+    </div>
+</body>
+
+</html>
